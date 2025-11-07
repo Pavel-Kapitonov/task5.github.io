@@ -1,2 +1,2 @@
 # task5.github.io
-JS Calculator 
+Form and JavaScript event handling.
