@@ -17,17 +17,15 @@ function rachet(count, tovar) {
 function click1() {
 
     let inputField = document.querySelector('input[name="field1"]');
-    let inputValue = inputField.value.trim(); // .trim() удаляет пробелы в начале и конце
+    let inputValue = inputField.value.trim(); 
 
 
     let result = document.getElementById("result");
     let truestr = /^\d+$/; 
     
-    // получаем массив из например 123 = ["123"]
-    // поэтому если пусто то ничего корректного не получили
     if (inputValue.match(truestr) === null) {
 
-        result.textContent = "❌ Ошибка! Введите только целые числа.";
+        result.textContent = "❌ Ошибка! Введите натуральные числа.";
         result.style.color = "red"; 
         result.style.backgroundColor = "#EDEFF2";
 
@@ -52,3 +50,10 @@ function click1() {
         return false; // чтобы форма не отправлялась (не сбивался текст)
     }
 }
+
+
+window.addEventListener('DOMContentLoaded', function (event) {
+  console.log("DOM fully loaded and parsed");
+  let b = document.getElementById("my-button");
+  b.addEventListener("click", click1);
+});
